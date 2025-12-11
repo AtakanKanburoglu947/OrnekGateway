@@ -1,0 +1,6 @@
+@OrnekGateway_HostAddress = http://localhost:5080
+
+GET {{OrnekGateway_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

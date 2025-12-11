@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36518.9 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrnekGateway", "OrnekGateway\OrnekGateway.csproj", "{E2DB282E-7A2D-40E2-96A5-3931FBDDCE77}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Token", "Token\Token.csproj", "{6CA0B69D-4361-4246-BF5E-3B8FAC05ED45}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Authorization", "Authorization\Authorization.csproj", "{468B77D7-934D-4CC1-86F2-C86720F8C3E7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mediator", "Mediator\Mediator.csproj", "{0A99540D-2126-4A30-9D49-BDFE2C49A92D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherAPI", "WeatherAPI\WeatherAPI.csproj", "{CF12E291-E3B3-426F-9E98-F6FA7591CB89}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserService.Api", "UserService.Api\UserService.Api.csproj", "{3D986356-3F94-457B-B39F-38A4F1EDEDBE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E2DB282E-7A2D-40E2-96A5-3931FBDDCE77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2DB282E-7A2D-40E2-96A5-3931FBDDCE77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2DB282E-7A2D-40E2-96A5-3931FBDDCE77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2DB282E-7A2D-40E2-96A5-3931FBDDCE77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CA0B69D-4361-4246-BF5E-3B8FAC05ED45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CA0B69D-4361-4246-BF5E-3B8FAC05ED45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CA0B69D-4361-4246-BF5E-3B8FAC05ED45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CA0B69D-4361-4246-BF5E-3B8FAC05ED45}.Release|Any CPU.Build.0 = Release|Any CPU
+		{468B77D7-934D-4CC1-86F2-C86720F8C3E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{468B77D7-934D-4CC1-86F2-C86720F8C3E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{468B77D7-934D-4CC1-86F2-C86720F8C3E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{468B77D7-934D-4CC1-86F2-C86720F8C3E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A99540D-2126-4A30-9D49-BDFE2C49A92D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A99540D-2126-4A30-9D49-BDFE2C49A92D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A99540D-2126-4A30-9D49-BDFE2C49A92D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A99540D-2126-4A30-9D49-BDFE2C49A92D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF12E291-E3B3-426F-9E98-F6FA7591CB89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF12E291-E3B3-426F-9E98-F6FA7591CB89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF12E291-E3B3-426F-9E98-F6FA7591CB89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF12E291-E3B3-426F-9E98-F6FA7591CB89}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D986356-3F94-457B-B39F-38A4F1EDEDBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D986356-3F94-457B-B39F-38A4F1EDEDBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D986356-3F94-457B-B39F-38A4F1EDEDBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D986356-3F94-457B-B39F-38A4F1EDEDBE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8A113CF1-DD99-4DBE-A15E-DD1B694F4C23}
+	EndGlobalSection
+EndGlobal
