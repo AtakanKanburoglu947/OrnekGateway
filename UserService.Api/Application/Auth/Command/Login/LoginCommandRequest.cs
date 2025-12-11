@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using System.IdentityModel.Tokens.Jwt;
 using Token;
 using UserService.Api.Entities;
+using Utils;
 
 namespace UserService.Api.Application.Auth.Command.Login
 {
@@ -19,7 +20,7 @@ namespace UserService.Api.Application.Auth.Command.Login
         {
             var users = userDbContext.Users;
             var user = await users.FirstOrDefaultAsync(x=>x.Email == request.Email);
-            if (user is not null && user.Password == request.Password)
+            if (user is not null && CryptoUtils.VerifyHash(user.Password,request.Password))
             { 
                 var permissionIds = userDbContext.UserPermissions.Where(x=>x.UserId == user.Id).Select(x=>x.PermissionId);
                 if (permissionIds.Any()) {

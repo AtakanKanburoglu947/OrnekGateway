@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36518.9 d17.14
+VisualStudioVersion = 17.14.36518.9
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrnekGateway", "OrnekGateway\OrnekGateway.csproj", "{E2DB282E-7A2D-40E2-96A5-3931FBDDCE77}"
 EndProject
@@ -14,6 +14,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherAPI", "WeatherAPI\WeatherAPI.csproj", "{CF12E291-E3B3-426F-9E98-F6FA7591CB89}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserService.Api", "UserService.Api\UserService.Api.csproj", "{3D986356-3F94-457B-B39F-38A4F1EDEDBE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utils", "Utils\Utils.csproj", "{52E71D96-C628-4EBC-9D4C-7CA8597D0D0D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{3D986356-3F94-457B-B39F-38A4F1EDEDBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3D986356-3F94-457B-B39F-38A4F1EDEDBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3D986356-3F94-457B-B39F-38A4F1EDEDBE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52E71D96-C628-4EBC-9D4C-7CA8597D0D0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52E71D96-C628-4EBC-9D4C-7CA8597D0D0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52E71D96-C628-4EBC-9D4C-7CA8597D0D0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52E71D96-C628-4EBC-9D4C-7CA8597D0D0D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

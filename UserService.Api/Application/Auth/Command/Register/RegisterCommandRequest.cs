@@ -2,6 +2,7 @@
 using MediatR;
 using System.IdentityModel.Tokens.Jwt;
 using Token;
+using Utils;
 
 namespace UserService.Api.Application.Auth.Command.Register
 {
@@ -17,7 +18,8 @@ namespace UserService.Api.Application.Auth.Command.Register
         public async Task<Response> Handle(RegisterCommandRequest request, CancellationToken cancellationToken)
         {
 
-            var user = new Entities.User { Email = request.Email, Name = request.Name, Password = request.Password };
+            var user = new Entities.User { Email = request.Email, Name = request.Name, 
+                Password = CryptoUtils.Hash(request.Password) };
             context.Users.Add(user);
             await context.SaveChangesAsync();
             return Response.Success("Başarılı");
