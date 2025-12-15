@@ -9,9 +9,10 @@ namespace Authorization
     public enum UserClaimEnum
     {
         StandardUser = 1,
-        CanViewUsers = 2,
-        CanAddUsers = 3,
-        Seller = 4,
-        Admin = 5,
+        Admin = 2,
+        CanViewUsers = 3,
+        CanAddUsers = 4,
+        Seller = 5,
+       
     }
 }

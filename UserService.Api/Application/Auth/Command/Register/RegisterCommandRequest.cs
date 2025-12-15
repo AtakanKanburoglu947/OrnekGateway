@@ -1,4 +1,5 @@
-﻿using Mediator;
+﻿using Authorization;
+using Mediator;
 using MediatR;
 using System.IdentityModel.Tokens.Jwt;
 using Token;
@@ -21,6 +22,8 @@ namespace UserService.Api.Application.Auth.Command.Register
             var user = new Entities.User { Email = request.Email, Name = request.Name, 
                 Password = CryptoUtils.Hash(request.Password) };
             context.Users.Add(user);
+            await context.SaveChangesAsync();
+            context.UserPermissions.Add(new Entities.UserPermission { PermissionId = ((int)UserClaimEnum.StandardUser), UserId = user.Id });
             await context.SaveChangesAsync();
             return Response.Success("Başarılı");
 

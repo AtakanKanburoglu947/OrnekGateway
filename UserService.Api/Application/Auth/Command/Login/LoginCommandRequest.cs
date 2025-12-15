@@ -1,4 +1,5 @@
-﻿using Mediator;
+﻿using Authorization;
+using Mediator;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using System.IdentityModel.Tokens.Jwt;
@@ -20,7 +21,7 @@ namespace UserService.Api.Application.Auth.Command.Login
         {
             var users = userDbContext.Users;
             var user = await users.FirstOrDefaultAsync(x=>x.Email == request.Email);
-            if (user is not null && CryptoUtils.VerifyHash(user.Password,request.Password))
+            if (user is not null && CryptoUtils.VerifyHash(request.Password,user.Password))
             { 
                 var permissionIds = userDbContext.UserPermissions.Where(x=>x.UserId == user.Id).Select(x=>x.PermissionId);
                 if (permissionIds.Any()) {

@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using UserService.Api;
 
@@ -10,9 +11,11 @@ using UserService.Api;
 namespace UserService.Api.Migrations
 {
     [DbContext(typeof(UserDbContext))]
-    partial class UserDbContextModelSnapshot : ModelSnapshot
+    [Migration("20251215072628_added-admin-permission")]
+    partial class addedadminpermission
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -78,15 +81,6 @@ namespace UserService.Api.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Users");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Email = "admin@email.com",
-                            Name = "admin",
-                            Password = "562bb128105de756e7e0e1c19f32d547f0fd266d7bc742b4dcacb7006a789af4"
-                        });
                 });
 
             modelBuilder.Entity("UserService.Api.Entities.UserPermission", b =>
@@ -102,13 +96,6 @@ namespace UserService.Api.Migrations
                     b.HasIndex("PermissionId");
 
                     b.ToTable("UserPermissions");
-
-                    b.HasData(
-                        new
-                        {
-                            UserId = 1,
-                            PermissionId = 2
-                        });
                 });
 
             modelBuilder.Entity("UserService.Api.Entities.UserPermission", b =>
