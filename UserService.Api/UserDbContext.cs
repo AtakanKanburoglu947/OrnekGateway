@@ -27,6 +27,7 @@ namespace UserService.Api
                 );
             modelBuilder.Entity<User>().HasData(new User() { Id = 1 ,Email= "admin@email.com", Name = "admin", Password = CryptoUtils.Hash("admin")});
             modelBuilder.Entity<UserPermission>().HasData(new UserPermission() { PermissionId  = 2, UserId = 1});
+            modelBuilder.Entity<Permission>().HasIndex(x=> new {x.Id,x.UserClaimEnum}).IsUnique();
 
         }
         public DbSet<User> Users { get; set; }

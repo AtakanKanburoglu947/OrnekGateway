@@ -30,12 +30,14 @@ namespace Authorization
                 if (isTokenValid)
                 {
                     var claimsPrincipal = tokenService.GetClaimsPrincipalFromToken(token);
+                    httpContext.User = claimsPrincipal;
                     var userClaims = claimsPrincipal.Claims.Select(x=>x.Type);
                     var requiredClaims = authorizeAttribute.UserClaimEnums.Select(x=>x.ToString());
                     if (!userClaims.Any(x=>requiredClaims.Contains(x)))
                     {
                         throw new Exception("Yetki yok");
                     }
+                    
                 }
                 else { throw new Exception("Yetki yok"); }
              

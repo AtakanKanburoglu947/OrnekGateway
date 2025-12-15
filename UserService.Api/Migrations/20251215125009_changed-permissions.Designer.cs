@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using UserService.Api;
 
@@ -10,9 +11,11 @@ using UserService.Api;
 namespace UserService.Api.Migrations
 {
     [DbContext(typeof(UserDbContext))]
-    partial class UserDbContextModelSnapshot : ModelSnapshot
+    [Migration("20251215125009_changed-permissions")]
+    partial class changedpermissions
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -38,7 +41,7 @@ namespace UserService.Api.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("Id", "UserClaimEnum")
+                    b.HasIndex("UserClaimEnum")
                         .IsUnique();
 
                     b.ToTable("Permissions");

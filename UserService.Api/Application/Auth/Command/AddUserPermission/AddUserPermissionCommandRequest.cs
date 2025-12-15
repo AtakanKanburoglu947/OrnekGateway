@@ -1,9 +1,11 @@
-﻿using Mediator;
+﻿using Authorization;
+using Mediator;
 using MediatR;
 using UserService.Api.Entities;
 
 namespace UserService.Api.Application.Auth.Command.AddUserPermission
 {
+    [Authorize(UserClaimEnum.Admin)]
     public class AddUserPermissionCommandRequest : IRequest<Response>
     {
         public int UserId { get; set; }
