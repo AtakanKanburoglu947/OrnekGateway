@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using UserService.Api.Application.Auth.Command.AddPermission;
 using UserService.Api.Application.Auth.Command.AddUserPermission;
+using UserService.Api.Application.Auth.Command.ChangePassword;
 using UserService.Api.Application.Auth.Command.ChangeUserEmail;
 using UserService.Api.Application.Auth.Command.Login;
 using UserService.Api.Application.Auth.Command.Register;
@@ -45,7 +46,13 @@ namespace UserService.Api.Controllers
             var response = await mediator.Send(new GetUserQuery() { Id = id});
             return Ok(response);
         }
-     
+        [HttpPost]
+        public async Task<IActionResult> ChangePassword(ChangePasswordCommandRequest request)
+        {
+            var response  = await mediator.Send(request);
+            return Ok(response);
+        }
+      
     
 
     }
