@@ -24,11 +24,11 @@ namespace UserService.Api.Application.Auth.Command.ChangeUserEmail
             {
               
                     user.Email = request.NewEmail;
-                    await context.SaveChangesAsync();
+                     await context.SaveChangesAsync(); 
                     return Response.Success("başarılı");
                 
             }
-            else
+            else 
             {
                 throw new Exception("Hata");
             }
