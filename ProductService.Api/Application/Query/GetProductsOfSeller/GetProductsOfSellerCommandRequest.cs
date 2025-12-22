@@ -16,7 +16,7 @@ namespace ProductService.Api.Application.Query.GetProductsOfSeller
         public async Task<Response<List<Product>>> Handle(GetProductsOfSellerCommandQuery request, CancellationToken cancellationToken)
         {
            var products = await productDbContext.Products.Where(x => x.SellerId == request.SellerId).ToListAsync();
-            return Response<List<Product>>.Success("başarılı", null);
+            return Response<List<Product>>.Success("başarılı", products);
         }
     }
 }
