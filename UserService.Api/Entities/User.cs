@@ -11,6 +11,7 @@ namespace UserService.Api.Entities
 
         public string Password { get; set; }
         public ICollection<UserPermission> UserPermissions { get; set; }
+        public ICollection<DelegatedPermission> DelegatedPermissions { get; set; }
 
     }
 }

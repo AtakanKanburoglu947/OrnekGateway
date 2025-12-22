@@ -8,5 +8,7 @@ namespace UserService.Api.Entities
         public UserClaimEnum UserClaimEnum { get; set; }
         public string Name { get; set; }
         public ICollection<UserPermission> UserPermissions { get; set; }
+        public ICollection<DelegatedPermission> DelegatedPermissions { get; set; }
+
     }
 }

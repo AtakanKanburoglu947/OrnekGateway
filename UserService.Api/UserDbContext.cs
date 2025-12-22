@@ -20,6 +20,7 @@ namespace UserService.Api
         {
             base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<UserPermission>().HasKey(x=> new { x.UserId, x.PermissionId });
+            modelBuilder.Entity<DelegatedPermission>().HasKey(x=> new { x.UserId,x.PermissionId });
             modelBuilder.Entity<Permission>().HasData(
                 new Permission() { Id = ((int)UserClaimEnum.StandardUser), 
                     Name = UserClaimEnum.StandardUser.ToString(), UserClaimEnum = UserClaimEnum.StandardUser},
@@ -33,5 +34,6 @@ namespace UserService.Api
         public DbSet<User> Users { get; set; }
         public DbSet<Permission> Permissions { get; set; }
         public DbSet<UserPermission> UserPermissions { get; set; }
+        public DbSet<DelegatedPermission> DelegatedPermissions { get; set; }
     }
 }

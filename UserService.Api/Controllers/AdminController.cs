@@ -1,6 +1,7 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using UserService.Api.Application.Auth.Command.AddDelegatedPermission;
 using UserService.Api.Application.Auth.Command.AddPermission;
 using UserService.Api.Application.Auth.Command.AddUserPermission;
 using UserService.Api.Application.Auth.Command.RemoveUserPermission;
@@ -33,6 +34,13 @@ namespace UserService.Api.Controllers
         {
             var response = await mediator.Send(request);
             return Ok(response);
+        }
+        [HttpPost]
+        public async Task<IActionResult> AddDelegatedPermission(AddDelegatedPermissionCommand request)
+        {
+            var response = await mediator.Send(request);
+            return Ok(response);
+
         }
     }
 }
